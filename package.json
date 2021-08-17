@@ -1,0 +1,24 @@
+{
+  "name": "gyptest",
+  "version": "1.0.0",
+  "description": "gyptest example",
+  "main": "src/index.js",
+  "scripts": {
+    "localtest": "ts-node src/index.ts",
+    "build": "node-gyp clean && node-gyp configure && node-gyp build",
+    "rebuild": "node-gyp rebuild",
+    "tbuild": "npm run build && npm run localtest"
+  },
+  "author": "sensuos",
+  "license": "MIT",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^4.0.0",
+    "typescript": "^4.3.5"
+  },
+  "gyp": true,
+  "devDependencies": {
+    "@types/bindings": "^1.5.1",
+    "ts-node": "^10.2.0"
+  }
+}
